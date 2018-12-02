@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="librerias/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="librerias/datatable/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="librerias/datatable/dataTables.bootstrap4.min.css">
