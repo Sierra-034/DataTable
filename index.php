@@ -16,7 +16,9 @@
 					</div>
 					<div class="card-body">
 						<h5 class="card-title">Lista de juegos de NES clásicos</h5>
-						<span class="btn btn-primary">Agregar nuevo</span>
+						<span class="btn btn-primary">
+							Agregar nuevo <i class="fas fa-plus-circle"></i>
+						</span>
 						<hr>
 						<div id="tableDataTable"></div>
 					</div>
@@ -33,5 +35,5 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('#tableDataTable').load('tabla.php');
-	})
+	});
 </script>
