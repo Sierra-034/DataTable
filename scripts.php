@@ -1,5 +1,5 @@
-<link rel="stylesheet" type="text/css" href="librerias/boostrap/boostrap.min.css">
-<link rel="stylesheet" type="text/css" href="librerias/datatable/boostrap.css">
+<link rel="stylesheet" type="text/css" href="librerias/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="librerias/datatable/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="librerias/datatable/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" type="text/css" href="librerias/alertify/css/alertify.css">
 <link rel="stylesheet" type="text/css" href="librerias/alertify/css/themes/bootstrap.css">
