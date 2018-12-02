@@ -18,6 +18,14 @@ class Crud {
 		$datos = array('ID_JUEGO' => $ver[0], 'NOMBRE' => $ver[1], 'ANIO' => $ver[2], 'EMPRESA' => $ver[3]);
 		return $datos;
 	}
+
+	function update($datos) {
+		$obj = new Connection();
+		$connection = $obj->get_connection();
+
+		$sql = "UPDATE JUEGOS SET NOMBRE = '$datos[0]', ANIO = '$datos[1]', EMPRESA = '$datos[2]' WHERE ID_JUEGO = '$datos[3]'";
+		return mysqli_query($connection, $sql);
+	}
 }
 
  ?>

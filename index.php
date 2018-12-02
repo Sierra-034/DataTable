@@ -108,6 +108,26 @@
 				}
 			});
 		});
+
+		$('#btnActualizar').click(function() {
+			datos = $('#frmnuevoU').serialize();
+			$.ajax({
+				type: "POST",
+				data: datos,
+				url: "procesos/actualizar.php",
+				success: function(r) {
+					console.log(r);
+					if(r == 1) {
+						$('#frmnuevoU')[0].reset();
+						$('#tableDataTable').load('tabla.php');
+						alertify.success("Actualizado con éxito");
+					}
+					else{
+						alertify.error("Falló al actualizar");
+					}
+				}
+			});
+		});
 	});
 </script>
 
