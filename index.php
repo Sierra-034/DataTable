@@ -56,6 +56,35 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Actualizar juego</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="frmnuevoU">
+						<input type="text" hidden="" id="idJuego" name="idJuego">
+						<label>Nombre</label>
+						<input type="text" class="form-control input-sm" id="nombreU" name="nombreU">
+						<label>Año</label>
+						<input type="text" class="form-control input-sm" id="anioU" name="anioU">
+						<label>Empresa</label>
+						<input type="text" class="form-control input-sm" id="empresaU" name="empresaU">
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+					<button type="button" class="btn btn-warning" id="btnActualizar">Actualizar</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
 
@@ -86,4 +115,22 @@
 	$(document).ready(function() {
 		$('#tableDataTable').load('tabla.php');
 	});
+</script>
+
+<script type="text/javascript">
+	function agregaFrmActualizar(idJuego) {
+		$.ajax({
+			type: "POST",
+			data: "idJuego=" + idJuego,
+			url: "procesos/obtenerDatos.php",
+			success: function(r) {
+				console.log(r);
+				datos = jQuery.parseJSON(r);
+				$('#idJuego').val(datos['ID_JUEGO']);
+				$('#nombreU').val(datos['NOMBRE']);
+				$('#anioU').val(datos['ANIO']);
+				$('#empresaU').val(datos['EMPRESA']);
+			}
+		});
+	}
 </script>
