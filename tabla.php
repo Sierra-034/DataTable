@@ -30,7 +30,7 @@ $result = mysqli_query($connection, $sql);
 					</span>
 				</td>
 				<td style="text-align: center;">
-					<span class="btn btn-danger btn-sm">
+					<span class="btn btn-danger btn-sm" onclick="eliminarDatos('<?php echo $mostrar[0] ?>')">
 						<i class="fas fa-minus-circle"></i>
 					</span>
 				</td>

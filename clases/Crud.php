@@ -26,6 +26,14 @@ class Crud {
 		$sql = "UPDATE JUEGOS SET NOMBRE = '$datos[0]', ANIO = '$datos[1]', EMPRESA = '$datos[2]' WHERE ID_JUEGO = '$datos[3]'";
 		return mysqli_query($connection, $sql);
 	}
+
+	function delete($idJuego) {
+		$obj = new Connection();
+		$connection = $obj->get_connection();
+
+		$sql = "DELETE FROM JUEGOS WHERE ID_JUEGO = '$idJuego'";
+		return mysqli_query($connection, $sql);
+	}
 }
 
  ?>
