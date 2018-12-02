@@ -6,6 +6,7 @@ class Connection {
 	
 	function get_connection() {
 		$connection = mysqli_connect('localhost', 'root', '', 'juegos');
+		$connection->set_charset('utf8');
 		return $connection;
 	}
 }
